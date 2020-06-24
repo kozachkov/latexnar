@@ -1,0 +1,8 @@
+.*
+*.out
+*.aux
+*.log
+*.out
+*.pdf
+*.toc
+!.gitignore

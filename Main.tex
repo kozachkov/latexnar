@@ -1,0 +1,48 @@
+% VERSION: 0.01
+
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T2A,T1]{fontenc}
+\usepackage[russian]{babel}
+
+\usepackage[bookmarks,hidelinks]{hyperref}
+
+\usepackage{cmap}
+\usepackage{upquote}
+\usepackage{minted}
+\usepackage{color}
+
+\frenchspacing
+\pagestyle{plain}
+
+\newminted[bash]{bash}{breaklines,breaksymbolleft=}
+
+\begin{document}
+
+\title{Про котиков 0.01}
+\author{Михаил Козачков\\Не забудь сменить на своё}
+\maketitle
+\newpage
+
+\renewcommand{\contentsname}{Содержание}
+\tableofcontents
+\newpage
+
+\part{Введение}
+
+\newpage
+
+\part{Основное повествование}
+
+\section{Про котиков}
+
+Про тех самых.
+
+\input{sections/Cat}
+
+\newpage
+
+\part{Заключение}
+
+\end{document}
