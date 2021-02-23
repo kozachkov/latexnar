@@ -1,10 +1,18 @@
-% VERSION: 0.01
+\documentclass[12pt,oneside,openright,a4paper]{memoir}
 
-\documentclass[12pt]{article}
+% ============================
+%   Поддержка русского языка
+% ============================
 
 \usepackage[utf8]{inputenc}
 \usepackage[T2A,T1]{fontenc}
 \usepackage[russian]{babel}
+
+% ==============
+%   Начертание
+% ==============
+
+\usepackage{DejaVuSerif}
 
 \usepackage[bookmarks,hidelinks]{hyperref}
 
@@ -13,12 +21,33 @@
 \usepackage{minted}
 \usepackage{color}
 
+\usepackage{graphicx}
+
 \frenchspacing
 \pagestyle{plain}
 
 \newminted[bash]{bash}{breaklines,breaksymbolleft=}
 
+% ===================
+%   Размер страницы
+% ===================
+\setlength{\trimtop}{0pt}
+\setlength{\trimedge}{0pt}
+\setlength{\foremargin}{3cm}
+\setlength{\spinemargin}{3cm}
+\setlength{\textwidth}{\paperwidth-\foremargin-\spinemargin}
+
+% ==============
+%   Содержание
+% ==============
+\cftpagenumbersoff{part}
+\setlength{\cftpartnumwidth}{1cm}
+
+\checkandfixthelayout
+
 \begin{document}
+
+\mainmatter
 
 \title{Про котиков 0.01}
 \author{Михаил Козачков\\Не забудь сменить на своё}
@@ -39,7 +68,7 @@
 
 Про тех самых.
 
-\input{sections/Cat}
+\input{sections/Предисловие}
 
 \newpage
 
