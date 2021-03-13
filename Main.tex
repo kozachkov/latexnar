@@ -22,6 +22,11 @@
 \usepackage{color}
 
 \usepackage{graphicx}
+\graphicspath{ {images/} }
+\DeclareGraphicsExtensions{.png,.pdf}
+
+\usepackage{imakeidx}
+\makeindex[title=Предметный указатель, intoc]
 
 \frenchspacing
 \pagestyle{plain}
@@ -66,12 +71,14 @@
 
 \section{Про котиков}
 
-Про тех самых.
+Про тех \index{самых}.
 
 \input{sections/Предисловие}
 
 \newpage
 
 \part{Заключение}
+
+\printindex
 
 \end{document}
