@@ -1,0 +1,86 @@
+\documentclass[12pt,oneside,openright,a4paper]{memoir}
+
+% ============================
+%   Поддержка русского языка
+% ============================
+
+\usepackage[utf8]{inputenc}
+\usepackage[T2A,T1]{fontenc}
+\usepackage[russian]{babel}
+
+% ==============
+%   Начертание
+% ==============
+
+\usepackage{DejaVuSerif}
+
+\usepackage[bookmarks,hidelinks]{hyperref}
+
+\usepackage{cmap}
+\usepackage{upquote}
+\usepackage{minted}
+\usepackage{color}
+
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+\DeclareGraphicsExtensions{.png,.pdf}
+
+\usepackage{imakeidx}
+\makeindex[title=Предметный указатель, intoc]
+
+\frenchspacing
+\pagestyle{plain}
+
+\newminted[bash]{bash}{breaklines,breaksymbolleft=}
+\newminted[xml]{xml}{breaklines,breaksymbolleft=}
+\newminted[perl]{perl}{breaklines,breaksymbolleft=}
+
+% ===================
+%   Размер страницы
+% ===================
+\setlength{\trimtop}{0pt}
+\setlength{\trimedge}{0pt}
+\setlength{\foremargin}{3cm}
+\setlength{\spinemargin}{3cm}
+\setlength{\textwidth}{\paperwidth-\foremargin-\spinemargin}
+
+% ==============
+%   Содержание
+% ==============
+\cftpagenumbersoff{part}
+\setlength{\cftpartnumwidth}{1cm}
+
+\checkandfixthelayout
+
+\begin{document}
+
+\mainmatter
+
+\title{Про котиков 0.01}
+\author{Михаил Козачков\\Не забудь сменить на своё}
+\maketitle
+\newpage
+
+\renewcommand{\contentsname}{Содержание}
+\tableofcontents
+\newpage
+
+\part{Введение}
+
+\newpage
+
+\part{Основное повествование}
+
+\section{Про котиков}
+
+Про тех \index{самых}.
+
+\input{sections/Предисловие}
+
+\newpage
+
+\part{Заключение}
+
+\printindex
+
+\end{document}
